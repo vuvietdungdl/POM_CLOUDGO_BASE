@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium" parallel="false" thread-count="3">
+<!--<suite name="Selenium" parallel="tests" thread-count="3">-->
+
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+    </listeners>
+
+    <parameter name="url" value="https://base.cloudpro.vn"></parameter>
+
+<!--    <test name="Run On Chrome">-->
+<!--            <parameter name="browser" value="Chrome"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="com.base.target.Target_01_Create_Edit_Verify_TestNG"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Run On Firefox">-->
+<!--        <parameter name="browser" value="Firefox"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="com.base.target.Target_01_Create_Edit_Verify_TestNG"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Run On Edge">-->
+<!--        <parameter name="browser" value="Edge"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="com.base.target.Target_01_Create_Edit_Verify_TestNG"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+    <test name="Run On Headless">
+        <parameter name="browser" value="Headless"></parameter>
+    <classes>
+        <class name="com.base.target.Target_01_Create_Edit_Verify_TestNG"/>
+    </classes>
+    </test>
+
+</suite>

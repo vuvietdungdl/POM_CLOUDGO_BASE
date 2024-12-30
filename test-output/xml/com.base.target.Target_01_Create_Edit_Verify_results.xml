@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run On Chrome"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="25.829">
+  <properties />
+  
+  
+            <testcase name="TC_03_Edit_Target" time="2.665" classname="com.base.target.Target_01_Create_Edit_Verify_TestNG" />
+                <testcase name="TC_02_Verify_Target_After_Create" time="0.536" classname="com.base.target.Target_01_Create_Edit_Verify_TestNG" />
+                <testcase name="TC_01_Create_Target_Success" time="12.504" classname="com.base.target.Target_01_Create_Edit_Verify_TestNG" />
+                <testcase name="TC_04_Delete_Target" time="10.124" classname="com.base.target.Target_01_Create_Edit_Verify_TestNG" />
+      
+</testsuite>

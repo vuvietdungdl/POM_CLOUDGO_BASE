@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run On Chrome"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="32.841">
+  <properties />
+  
+  
+            <testcase name="TC_02_OpenMultiPage" time="20.461" classname="com.base.target.Target_01_CreateTarger_Lever5_Dynamic" />
+                <testcase name="TC_01_LoginSuccess" time="12.380" classname="com.base.target.Target_01_CreateTarger_Lever5_Dynamic" />
+      
+</testsuite>

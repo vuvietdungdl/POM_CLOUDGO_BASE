@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run On Headless"
+           tests="5"
+           failures="1"
+           errors="0"
+           skipped="4"
+           time="0.015">
+  <properties />
+            <testcase name="beforeClass" time="0.015" classname="com.base.login.Login_01_LoginSuccess">
+                <failure type="java.lang.RuntimeException"
+                  message="Browser is not valid!!!"
+              >
+<![CDATA[java.lang.RuntimeException: Browser is not valid!!!
+  commons.AbstractTest.openMultiBrowser(AbstractTest.java:57)
+  com.base.login.Login_01_LoginSuccess.beforeClass(Login_01_LoginSuccess.java:26)
+  java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+  java.base/java.lang.reflect.Method.invoke(Method.java:580)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+  org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+  org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+  org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+  org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+  java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+  org.testng.TestRunner.privateRun(TestRunner.java:739)
+  org.testng.TestRunner.run(TestRunner.java:614)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+  org.testng.SuiteRunner.run(SuiteRunner.java:312)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+  org.testng.TestNG.runSuites(TestNG.java:1112)
+  org.testng.TestNG.run(TestNG.java:1079)
+  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="afterClass" time="0.0" classname="com.base.login.Login_01_LoginSuccess">
+          <skipped />
+    </testcase>
+            <testcase name="TC_03" time="0.0" classname="com.base.login.Login_01_LoginSuccess">
+          <skipped />
+    </testcase>
+            <testcase name="TC_01_Login_Success_HomePage" time="0.0" classname="com.base.login.Login_01_LoginSuccess">
+          <skipped />
+    </testcase>
+            <testcase name="TC_02" time="0.0" classname="com.base.login.Login_01_LoginSuccess">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>
