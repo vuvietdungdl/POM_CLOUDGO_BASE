@@ -49,7 +49,7 @@ public class Target_01_Create_Edit_Verify_TestNG extends AbstractTest {
         targetPageObject.inputDynamicSelectTextBox(driver, "4", target.LASTNAME);
 
         log.info("Step 03-3: Nhập thông tin Tên");
-        //targetPageObject.inputDynamicTextBox(driver, "Tên", target.FIRTNAME);
+        targetPageObject.inputDynamicTextBox(driver, "Tên", target.FIRTNAME);
 
         log.info("Step 03-4: Nhập thông tin Di động");
         targetPageObject.inputDynamicTextBox(driver, "Di động", target.MOBILE + randomNumber());
@@ -88,7 +88,7 @@ public class Target_01_Create_Edit_Verify_TestNG extends AbstractTest {
 
     }
 
-    //@Test
+    @Test
     public void TC_02_Verify_Target_After_Create() {
         log.info("Step 01: Kiểm tra dữ liệu Họ và tên đệm");
         targetPageObject.isVerifyDynamicDataField(driver, "Họ và tên đệm", target.LASTNAME);
@@ -127,7 +127,7 @@ public class Target_01_Create_Edit_Verify_TestNG extends AbstractTest {
         targetPageObject.isVerifyDynamicDataField(driver, "Mô tả", target.DESCRIPTION);
     }
 
-    //@Test()
+    @Test()
     public void TC_03_Edit_Target() {
         log.info("Step 01: Click button Sửa");
         targetPageObject.clickDynamicAddToRecord(driver, "Sửa");
@@ -175,7 +175,7 @@ public class Target_01_Create_Edit_Verify_TestNG extends AbstractTest {
         targetPageObject.clickDynamicButtonSubmit(driver, "Lưu");
     }
 
-    //@Test
+    @Test
     public void TC_04_Delete_Target() {
         log.info("Step 1: Click vào thao tác");
         targetPageObject.clickActionOrtherDetailRecord(driver, "Xóa");
