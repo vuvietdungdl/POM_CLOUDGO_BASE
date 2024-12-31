@@ -42,6 +42,7 @@ public class AbstractTest {
         deleteAllFileInFolder("allure-json");
 
     }
+
     public WebDriver openMultiBrowser(String browserName, String url) {
         if (browserName.equalsIgnoreCase("Chrome")) {
             ChromeOptions options = new ChromeOptions();
@@ -76,6 +77,12 @@ public class AbstractTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
         return driver;
+    }
+
+    public void tearDownDriver() {
+        if (getDriver() != null) {
+            getDriver().quit();
+        }
     }
 
     protected void closeBrowser(WebDriver driver) {

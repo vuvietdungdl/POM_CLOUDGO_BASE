@@ -1,1 +1,0 @@
-{"uuid":"4ddb5d0f-208b-42f6-9522-4afff81d0bd1","name":"Selenium","children":["36b5dde4-3f61-4394-8021-c8bf9a8eeef9"],"befores":[{"name":"deleteFileInReport","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1735543643116,"stop":1735543643134}],"afters":[],"start":1735543643104,"stop":1735543696032}

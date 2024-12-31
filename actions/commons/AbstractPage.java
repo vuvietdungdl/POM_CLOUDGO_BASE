@@ -118,7 +118,7 @@ public class AbstractPage {
         // Locate all items in the dropdown
         List<WebElement> allItems = driver.findElements(By.xpath(listItemsXpath));
         // Wait for all items to be visible
-        wait.until(ExpectedConditions.visibilityOfAllElements(allItems));
+        // wait.until(ExpectedConditions.visibilityOfAllElements(allItems));
         // Iterate through the items and select the one that matches the desired value
         for (WebElement item : allItems) {
             if (item.getText().equals(valueItem)) {
