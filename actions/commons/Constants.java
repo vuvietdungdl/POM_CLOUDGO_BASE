@@ -8,7 +8,7 @@ public class Constants {
 //    public static final String URL_DEV = "https://dev.cloudpro.vn/";
 //    public static final String URL_BASE = "https://base.cloudpro.vn/";
     public static final String USERNAME_TEXTBOX = "admin";
-    public static final String PASSWORD_TEXTBOX = "G0Strong@2025";
+    public static final String PASSWORD_TEXTBOX = "goStrong";
     //public static final String EXTENT_PATH = "ExtentReportV2";
 
     public static final String PROJECT_PATH = System.getProperty("user.dir");

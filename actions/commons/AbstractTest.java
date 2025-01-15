@@ -1,35 +1,31 @@
 package commons;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-//import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.testng.annotations.BeforeSuite;
 
 public class AbstractTest {
     private WebDriver driver;
 
-    protected final Logger log;
-    public AbstractTest(){
-        log = LogManager.getLogger(getClass());
+    // Init log
+    protected final Log log;
+    // Constructor
+    protected AbstractTest() {
+        log = LogFactory.getLog(getClass());
     }
-
     public WebDriver getDriver(){
         return driver;
     }
@@ -127,6 +123,7 @@ public class AbstractTest {
 
         } catch (Exception e) {
             pass=false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(),e);
             Reporter.getCurrentTestResult().setThrowable(e);
         }
         return pass;

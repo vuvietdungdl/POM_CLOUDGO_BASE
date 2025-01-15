@@ -9,10 +9,11 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/testcases" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/testdata" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/logs" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/logs" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="allure-java-commons-2.24.0" level="project" />
+    <orderEntry type="library" name="commons-codec-1.11" level="project" />
   </component>
 </module>

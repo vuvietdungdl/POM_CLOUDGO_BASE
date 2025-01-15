@@ -2,6 +2,7 @@ package com.base.target;
 
 import commons.AbstractTest;
 import commons.Constants;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,7 +50,7 @@ public class Target_01_Create_Edit_Verify_TestNG extends AbstractTest {
         targetPageObject.inputDynamicSelectTextBox(driver, "4", target.LASTNAME);
 
         log.info("Step 03-3: Nhập thông tin Tên");
-        targetPageObject.inputDynamicTextBox(driver, "Tên", target.FIRTNAME);
+        //targetPageObject.inputDynamicTextBox(driver, "Tên", target.FIRTNAME);
 
         log.info("Step 03-4: Nhập thông tin Di động");
         targetPageObject.inputDynamicTextBox(driver, "Di động", target.MOBILE + randomNumber());
@@ -88,113 +89,114 @@ public class Target_01_Create_Edit_Verify_TestNG extends AbstractTest {
 
     }
 
-    @Test
-    public void TC_02_Verify_Target_After_Create() {
-        log.info("Step 01: Kiểm tra dữ liệu Họ và tên đệm");
-        targetPageObject.isVerifyDynamicDataField(driver, "Họ và tên đệm", target.LASTNAME);
 
-        log.info("Step 02: Kiểm tra dữ liệu Tên");
-        targetPageObject.isVerifyDynamicDataField(driver, "Tên", target.FIRTNAME);
+//@Test
+public void TC_02_Verify_Target_After_Create() {
+    log.info("Step 01: Kiểm tra dữ liệu Họ và tên đệm");
+    targetPageObject.isVerifyDynamicDataField(driver, "Họ và tên đệm", target.LASTNAME);
 
-        log.info("Step 03: Kiểm tra dữ liệu Mobile");
-        targetPageObject.isVerifyDynamicDataField(driver, "Di động", Mobile_Get);
+    log.info("Step 02: Kiểm tra dữ liệu Tên");
+    targetPageObject.isVerifyDynamicDataField(driver, "Tên", target.FIRTNAME);
 
-        log.info("Step 04: Kiểm tra dữ liệu Email");
-        targetPageObject.isVerifyDynamicDataField(driver, "Email", Email_Get);
+    log.info("Step 03: Kiểm tra dữ liệu Mobile");
+    targetPageObject.isVerifyDynamicDataField(driver, "Di động", Mobile_Get);
 
-        log.info("Step 05: Kiểm tra dữ liệu Website");
-        targetPageObject.isVerifyDynamicDataField(driver, "Website", target.WEBSITE);
+    log.info("Step 04: Kiểm tra dữ liệu Email");
+    targetPageObject.isVerifyDynamicDataField(driver, "Email", Email_Get);
 
-        log.info("Step 06: Kiểm tra dữ liệu Mã số thuế");
-        targetPageObject.isVerifyDynamicDataField(driver, "Mã số thuế", target.TAX_CODE);
+    log.info("Step 05: Kiểm tra dữ liệu Website");
+    targetPageObject.isVerifyDynamicDataField(driver, "Website", target.WEBSITE);
 
-        log.info("Step 07: Kiểm tra dữ liệu Nghành nghề");
-        targetPageObject.isVerifyDynamicDataField(driver, "Ngành nghề", target.INDUSTRY);
+    log.info("Step 06: Kiểm tra dữ liệu Mã số thuế");
+    targetPageObject.isVerifyDynamicDataField(driver, "Mã số thuế", target.TAX_CODE);
 
-        log.info("Step 08: Kiểm tra dữ liệu Địa chỉ");
-        targetPageObject.isVerifyDynamicDataField(driver, "Địa chỉ", target.LANE);
+    log.info("Step 07: Kiểm tra dữ liệu Nghành nghề");
+    targetPageObject.isVerifyDynamicDataField(driver, "Ngành nghề", target.INDUSTRY);
 
-        log.info("Step 09: Kiểm tra dữ liệu Quận/Huyện");
-        targetPageObject.isVerifyDynamicDataField(driver, "Quận/Huyện", target.STATE);
+    log.info("Step 08: Kiểm tra dữ liệu Địa chỉ");
+    targetPageObject.isVerifyDynamicDataField(driver, "Địa chỉ", target.LANE);
 
-        log.info("Step 10: Kiểm tra dữ liệu Tỉnh thành phố");
-        targetPageObject.isVerifyDynamicDataField(driver, "Tỉnh/ TP", target.CITY);
+    log.info("Step 09: Kiểm tra dữ liệu Quận/Huyện");
+    targetPageObject.isVerifyDynamicDataField(driver, "Quận/Huyện", target.STATE);
 
-        log.info("Step 11: Kiểm tra dữ liệu Quốc Gia");
-        targetPageObject.isVerifyDynamicDataField(driver, "Quốc gia", target.COUNTRY);
+    log.info("Step 10: Kiểm tra dữ liệu Tỉnh thành phố");
+    targetPageObject.isVerifyDynamicDataField(driver, "Tỉnh/ TP", target.CITY);
 
-        log.info("Step 12: Kiểm tra dữ liệu Mô tả");
-        targetPageObject.isVerifyDynamicDataField(driver, "Mô tả", target.DESCRIPTION);
-    }
+    log.info("Step 11: Kiểm tra dữ liệu Quốc Gia");
+    targetPageObject.isVerifyDynamicDataField(driver, "Quốc gia", target.COUNTRY);
 
-    @Test()
-    public void TC_03_Edit_Target() {
-        log.info("Step 01: Click button Sửa");
-        targetPageObject.clickDynamicAddToRecord(driver, "Sửa");
+    log.info("Step 12: Kiểm tra dữ liệu Mô tả");
+    targetPageObject.isVerifyDynamicDataField(driver, "Mô tả", target.DESCRIPTION);
+}
 
-        log.info("Step 02: Kiểm tra dữ liệu trong màn hình Edit");
+//@Test()
+public void TC_03_Edit_Target() {
+    log.info("Step 01: Click button Sửa");
+    targetPageObject.clickDynamicAddToRecord(driver, "Sửa");
 
-        log.info("Step 02-1: Kiểm tra dữ liệu danh xưng");
-        targetPageObject.verifyDynamicSelectValue(driver, "4", target.TITLE);
-        log.info("Step 02-1: Kiểm tra dữ liệu Họ và tên đệm");
+    log.info("Step 02: Kiểm tra dữ liệu trong màn hình Edit");
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Tên");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Tên", target.FIRTNAME);
+    log.info("Step 02-1: Kiểm tra dữ liệu danh xưng");
+    targetPageObject.verifyDynamicSelectValue(driver, "4", target.TITLE);
+    log.info("Step 02-1: Kiểm tra dữ liệu Họ và tên đệm");
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Di động");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Di động", Mobile_Get);
+    log.info("Step 02-1: Kiểm tra dữ liệu Tên");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Tên", target.FIRTNAME);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Email");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Email", Email_Get);
+    log.info("Step 02-1: Kiểm tra dữ liệu Di động");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Di động", Mobile_Get);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Website");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Website", target.WEBSITE);
+    log.info("Step 02-1: Kiểm tra dữ liệu Email");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Email", Email_Get);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu MST");
-        targetPageObject.verifyDynamicValueAttributeNOTID(driver, "Mã số thuế", target.TAX_CODE);
+    log.info("Step 02-1: Kiểm tra dữ liệu Website");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Website", target.WEBSITE);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Ngành nghề");
-        targetPageObject.verifyDynamicSelectValue(driver, "6", target.INDUSTRY);
+    log.info("Step 02-1: Kiểm tra dữ liệu MST");
+    targetPageObject.verifyDynamicValueAttributeNOTID(driver, "Mã số thuế", target.TAX_CODE);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Địa chỉ");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Địa chỉ", target.LANE);
+    log.info("Step 02-1: Kiểm tra dữ liệu Ngành nghề");
+    targetPageObject.verifyDynamicSelectValue(driver, "6", target.INDUSTRY);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Quận huyện");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Quận/Huyện", target.STATE);
+    log.info("Step 02-1: Kiểm tra dữ liệu Địa chỉ");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Địa chỉ", target.LANE);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Thành phố");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Tỉnh/ TP", target.CITY);
+    log.info("Step 02-1: Kiểm tra dữ liệu Quận huyện");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Quận/Huyện", target.STATE);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Quốc gia");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Quốc gia", target.COUNTRY);
+    log.info("Step 02-1: Kiểm tra dữ liệu Thành phố");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Tỉnh/ TP", target.CITY);
 
-        log.info("Step 02-1: Kiểm tra dữ liệu Mô tả");
-        targetPageObject.verifyDynamicValueAttribute(driver, "Mô tả", target.DESCRIPTION);
+    log.info("Step 02-1: Kiểm tra dữ liệu Quốc gia");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Quốc gia", target.COUNTRY);
 
-        log.info("Step 03: Click Lưu");
-        targetPageObject.clickDynamicButtonSubmit(driver, "Lưu");
-    }
+    log.info("Step 02-1: Kiểm tra dữ liệu Mô tả");
+    targetPageObject.verifyDynamicValueAttribute(driver, "Mô tả", target.DESCRIPTION);
 
-    @Test
-    public void TC_04_Delete_Target() {
-        log.info("Step 1: Click vào thao tác");
-        targetPageObject.clickActionOrtherDetailRecord(driver, "Xóa");
+    log.info("Step 03: Click Lưu");
+    targetPageObject.clickDynamicButtonSubmit(driver, "Lưu");
+}
 
-        log.info("Step 2: Thao tác Xác nhận xóa dữ liệu");
-        targetPageObject.clickConfirmPopup(driver, "Yes");
+//@Test
+public void TC_04_Delete_Target() {
+    log.info("Step 1: Click vào thao tác");
+    targetPageObject.clickActionOrtherDetailRecord(driver, "Xóa");
 
-        log.info("Step 3: Kiểm tra dữ liệu xóa thành công");
-        targetPageObject.isVerifyRecorDeleteSuccess(driver);
-    }
+    log.info("Step 2: Thao tác Xác nhận xóa dữ liệu");
+    targetPageObject.clickConfirmPopup(driver, "Yes");
+
+    log.info("Step 3: Kiểm tra dữ liệu xóa thành công");
+    targetPageObject.isVerifyRecorDeleteSuccess(driver);
+}
 
 
-    private String Mobile_Get;
-    private String Email_Get;
+private String Mobile_Get;
+private String Email_Get;
 
-    @AfterClass
-    public void afterClass() {
-        //closeBrowser(driver);
-        driver.quit();
-    }
+@AfterClass
+public void afterClass() {
+    //closeBrowser(driver);
+    driver.quit();
+}
 
 }

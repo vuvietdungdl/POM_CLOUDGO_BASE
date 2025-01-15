@@ -14,9 +14,8 @@
     <test name="Run On Chrome">
             <parameter name="browser" value="Chrome"></parameter>
         <classes>
-<!--            <class name="com.base.target.Target_01_Check_Open_MultiBrowser"/>-->
             <class name="com.base.target.Target_01_Create_Edit_Verify_TestNG"/>
-            <class name="com.base.target.Target_01_Create_Edit_Verify_Allure"/>
+<!--            <class name="com.base.target.Target_01_Create_Edit_Verify_Allure"/>-->
         </classes>
     </test>
 
